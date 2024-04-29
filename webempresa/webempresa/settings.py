@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-xv_jbu4$!$$*&1j1o9@13www*@#fns%8zhp_0teut%v+u*mxjs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['betadevv.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'services.apps.ServicesConfig',
     'social.apps.SocialConfig',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'webempresa.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -126,10 +126,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
+=======
+STATIC_ROOT = "/home/BetaDevv/Web_Empresa/webempresa/core/static"
+>>>>>>> 5dcc2d9b5b49335d7f85188da763a15335fb6a5f
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 #Media files
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = "/home/BetaDevv/Web_Empresa/webempresa/media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
