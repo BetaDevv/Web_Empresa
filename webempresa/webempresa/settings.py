@@ -126,12 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD
-=======
-STATIC_ROOT = "/home/BetaDevv/Web_Empresa/webempresa/core/static"
->>>>>>> 5dcc2d9b5b49335d7f85188da763a15335fb6a5f
-
-STATICFILES_DIRS = [
+STATIC_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 #Media files
